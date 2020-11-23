@@ -1,12 +1,12 @@
 import React from 'react';
-import{View, Text, StyleSheet, ScrollView, ImageBackground, Image, Linking} from 'react-native';
-import{DrawerItem,DrawerItemList} from '@react-navigation/drawer';
-import{Ionicons} from '@expo/vector-icons'
+import { View, Text, StyleSheet, ScrollView, ImageBackground, Image, Linking } from 'react-native';
+import { DrawerItem, DrawerItemList } from '@react-navigation/drawer';
+import { Ionicons } from '@expo/vector-icons'
 import {
     AdMobBanner,
     AdMobInterstitial,
     setTestDeviceIDAsync
-  } from 'expo-ads-admob';
+} from 'expo-ads-admob';
 
 
 
@@ -14,13 +14,13 @@ async function ShowIntersticial() {
 
 
 
-  }
+}
 
 export default sidebar = (props) => {
 
 
-    
-    return(    <ScrollView>
+
+    return (<ScrollView>
         <Text>Sidebar</Text>
 
 
@@ -30,17 +30,17 @@ export default sidebar = (props) => {
                 label="web"
                 onPress={() => Linking.openURL('http://www.adprosoft.com/')}
             />
-                        <DrawerItem
+            <DrawerItem
                 label="anuncio"
-                onPress={async () => { 
-                await setTestDeviceIDAsync('EMULATOR') 
-                await AdMobInterstitial.setAdUnitID('ca-app-pub-3940256099942544/1033173712') // Test ID, Replace with your-admob-unit-id
-                await AdMobInterstitial.requestAdAsync({ servePersonalizedAds: true})
-                await AdMobInterstitial.showAdAsync()}
-            }
+                onPress={async () => {
+                    await setTestDeviceIDAsync('EMULATOR')
+                    await AdMobInterstitial.setAdUnitID('ca-app-pub-3940256099942544/1033173712') // Test ID, Replace with your-admob-unit-id
+                    await AdMobInterstitial.requestAdAsync({ servePersonalizedAds: true })
+                    await AdMobInterstitial.showAdAsync()
+                }}
             />
         </View>
-                        
+
     </ScrollView>)
 
 };
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1
     },
-    profile:{
+    profile: {
         width: 80,
         height: 80,
         borderRadius: 40,

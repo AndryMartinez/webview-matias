@@ -1,0 +1,14 @@
+rootProject.name = 'webview'
+
+apply from: '../node_modules/react-native-unimodules/gradle.groovy'
+includeUnimodulesProjects()
+
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle");
+applyNativeModulesSettingsGradle(settings)
+
+include ':app'
+
+//MYAPP_UPLOAD_STORE_FILE=webview-matias-key.keystore
+//MYAPP_UPLOAD_KEY_ALIAS=webview-matias
+//MYAPP_UPLOAD_STORE_PASSWORD=webviewmatias2020
+//MYAPP_UPLOAD_KEY_PASSWORD=webviewmatias2020
